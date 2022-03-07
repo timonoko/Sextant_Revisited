@@ -7,9 +7,9 @@ you are home.
 
 Accuracy easily 10 kilometers. As one degree is 60 mautical miles.
 
-Written in brand new Python-Nokolisp. Sorry about that.
-
 Summertime is hereby cancelled. Wonkiness at the end of february is because correct daycount is not observed. Does not affect the
 results, however. 
+
+Written in brand new Python-Nokolisp. Sorry about that.
 
 <img src=KUVA.PNG>
