@@ -7,7 +7,7 @@ you are home.
 
 Written in brand new Python-Nokolisp. Sorry about that.
 
-Wonkiness at the end of february is because correct daycount was not observed. Does not affect the
-results, however.
+Summertime is hereby cancelled. Wonkiness at the end of february is because correct daycount is not observed. Does not affect the
+results, however. 
 
 <img src=KUVA.PNG>
