@@ -8,6 +8,6 @@ you are home.
 Written in brand new Python-Nokolisp. Sorry about that.
 
 Wonkiness at the end of february is because correct daycount was not observed. Does not affect the
-results, howver.
+results, however.
 
 <img src=KUVA.PNG>
