@@ -6,11 +6,7 @@
   (lambda
    (paper)
    (progn
-    (global RED)
-    (global GREEN)
-    (global BLACK)
-    (global WHITE)
-    (global YELLOW)
+    (globals RED GREEN BLACK WHITE YELLOW)
     (global GREY '(80 80 80))
     (global WID 1000)
     (global HEI 700)
