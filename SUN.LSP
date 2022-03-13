@@ -6,14 +6,22 @@
   (lambda
    (paper)
    (progn
-    (setq GREY '(80 80 80))
-    (setq WID 1600)
-    (setq HEI 900)
-    (setq KUVA (newimage WID HEI (if paper WHITE BLACK)))
+    (global RED)
+    (global GREEN)
+    (global BLACK)
+    (global WHITE)
+    (global YELLOW)
+    (global GREY '(80 80 80))
+    (global WID 1000)
+    (global HEI 700)
+    (global MAX (int (sun_alt 6 21 10 1)))
+    (global MIN (int (sun_alt 12 22 10 1)))
+    (global KUVA 0)
+    (setq KUVA (newimage WID HEI (iff paper WHITE BLACK)))
     (imagetext
      KUVA
      '(30 30)
-     (list 'FreeSans.ttf 30 (if paper '(80 80 0) YELLOW))
+     (list 'FreeSans.ttf 30 (iff paper '(80 80 0) YELLOW))
      (compress
       (cdr
        (quote
@@ -22,19 +30,17 @@
     (imagetext
      KUVA
      '(30 70)
-     (list 'FreeSans.ttf 30 (if paper '(80 80 0) YELLOW))
+     (list 'FreeSans.ttf 30 (iff paper '(80 80 0) YELLOW))
      (compress
       (cdr
        (quote
         (34 69 86 69 82 89 32 77 79 78 84
          72 44 32 68 65 89 32 38 32 72 79
-         85 82)))))
-    (setq MAX (sun_alt 6 21 10 1))
-    (setq MIN (sun_alt 12 22 10 1)))
+         85 82))))))
    (defun
     ycoord
     (y)
-    (- HEI (* HEI (/ (- y MIN) (- MAX MIN)))))
+    (int (- HEI (* HEI (/ (- y MIN) (- MAX MIN))))))
    (defun
     xcoord
     (m d)
@@ -47,7 +53,7 @@
     (imagetext
      KUVA
      (list 0 (ycoord a))
-     (list 'FreeSans.ttf 10 (if paper BLACK WHITE))
+     (list 'FreeSans.ttf 10 (iff paper BLACK WHITE))
      (int a))
     (imagedraw KUVA (list 0 (ycoord a)) (list WID (ycoord a)) GREY)
     (if
@@ -58,25 +64,25 @@
        KUVA
        (list 0 (ycoord a))
        (list WID (ycoord a))
-       (if paper '(80 80 0) YELLOW)))))
+       (iff paper '(80 80 0) YELLOW)))))
    (for
     (m 1 12)
     (imagetext
      KUVA
      (list (xcoord m 1) (- HEI 15))
-     (list 'FreeSans.ttf 15 (if paper '(80 80 0) YELLOW))
+     (list 'FreeSans.ttf 15 (iff paper '(80 80 0) YELLOW))
      m)
     (imagedraw
      KUVA
      (list (- (xcoord m 1) 1) (- HEI 11))
      (list (- (xcoord m 1) 1) 0)
-     (if paper '(80 80 0) YELLOW))
+     (iff paper '(80 80 0) YELLOW))
     (for
      (d 1 28 3)
      (imagetext
       KUVA
       (list (xcoord m d) (- HEI 11))
-      (list 'FreeSans.ttf 10 (if paper BLACK WHITE))
+      (list 'FreeSans.ttf 10 (iff paper BLACK WHITE))
       d)
      (imagedraw
       KUVA
@@ -92,8 +98,8 @@
      COLOR
      (if
       (< h 13)
-      (if paper '(0 120 0) GREEN)
-      (if paper '(120 0 0) RED)))
+      (iff paper '(0 120 0) GREEN)
+      (iff paper '(120 0 0) RED)))
     (setq x2 0)
     (setq y2 0)
     (for
@@ -108,10 +114,8 @@
        (imagetext KUVA (list x y) (list 'FreeSansBold.ttf 15 COLOR) h))
       (if (< y HEI) (imagedraw KUVA (list x2 y2) (list x y) COLOR))
       (setq x2 x)
-      (setq y2 y)))
-    (killdisplay)
-    (showimage KUVA))
-   (sleep 1)
-   (saveimage KUVA 'KUVA.PNG)
-   (killdisplay)))
- (defq SUN (SUN eka)))
+      (setq y2 y))))
+   (showimage KUVA)
+   (saveimage KUVA 'KUVA.PNG)))
+ (defq SUN (EKA SUN eka))
+ (defq EKA (lambda (x) x)))
