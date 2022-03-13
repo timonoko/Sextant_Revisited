@@ -12,8 +12,7 @@
     (global HEI 700)
     (global MAX (int (sun_alt 6 21 10 1)))
     (global MIN (int (sun_alt 12 22 10 1)))
-    (global KUVA 0)
-    (setq KUVA (newimage WID HEI (iff paper WHITE BLACK)))
+    (global KUVA (newimage WID HEI (iff paper WHITE BLACK)))
     (imagetext
      KUVA
      '(30 30)
