@@ -5,7 +5,7 @@ When coming home, you observe the angle of the sun. And when the sun is higher t
 move away from the sun and vice versa. If it is the same, you just just wait. If you have to wait all day,
 you are home. 
 
-Accuracy easily 10 kilometers. As one degree is 60 mautical miles.
+Accuracy easily 10 kilometers. As one degree is 60 nautical miles.
 
 Summertime is hereby cancelled. Wonkiness at the end of february is because correct daycount is not observed. Does not affect the
 results, however. 
